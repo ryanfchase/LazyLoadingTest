@@ -46,6 +46,10 @@ p {
   margin: 1em;
 }
 
+.footer {
+  margin: 2em;
+}
+
 /* make images fullscreen on small mobile */
 @media screen and (min-width: 450px) {
   .container { width: 80%; }
