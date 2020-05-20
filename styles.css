@@ -1,5 +1,6 @@
 * {
   overflow-x: hidden;
+  transition: linear 50ms;
 }
 
 body {
@@ -11,6 +12,16 @@ body {
   margin: 0;
 }
 
+h1, h3, h5 {
+  text-align: center;
+}
+
+p {
+  width: 80%;
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+
 .hero-image {
   background-image: url("./images/misty-mountains.webp");
   height: 200px;
@@ -18,17 +29,35 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .container {
   max-width: 1200px;
-  width: 80%;
+  width: 100%; /* hack to make images fullscreen on mobile */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-h1, h3, h5 {
-  text-align: center;
+.lazy {
+  margin: 1em;
+}
+
+/* make images fullscreen on small mobile */
+@media screen and (min-width: 450px) {
+  .container { width: 80%; }
+  p { width: 100%; }
+}
+
+@media screen and (min-width: 600px) {
+  body { font-size: 1.3em; }
+  p { line-height: 1.5em; }
+}
+
+@media screen and (min-width: 999px) {
+  body { font-size: 1.5em; }
+  p { line-height: 1.7em; }
 }
