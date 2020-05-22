@@ -29,5 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
   else {
     // fall back to a more compatible method...
     console.log("Need to implement a more compatible method");
+    lazyImages.forEach((img) => {
+      img.src = "images/hobbiton.webp";
+    })
   }
 });
