@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if (entry.isIntersecting) {
           let lazyImage = entry.target;
           console.log(lazyImage);
-          //lazyImage.src = lazyImage.dataset.src;
-          //lazyImage.srcset = lazyImage.dataset.srcset;
+          console.log(lazyImage.dataset);
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.srcset = lazyImage.dataset.srcset;
           lazyImage.classList.remove("lazy");
           lazyImageObserver.unobserve(lazyImage);
         }
